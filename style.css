@@ -1,0 +1,186 @@
+﻿/*On oublie le js pour faire ça, je vais passer par du less ou du sass*/
+/*sass avec compass http://compass-style.org/help/ (compass a une func sqrt)*/
+
+/*Constants...*/
+/*Fonts*/
+ @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+ @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+128|Libre+Barcode+128+Text|Nosifer');
+
+.cb{
+  clear:both;
+}
+.fl{
+  float:left;
+}
+.cya{
+  display:none;
+}
+body{
+  margin:0;
+  padding:0;
+}
+.main_title{
+  font-family:'Nosifer';
+  text-align:center;
+}
+.bar_code{
+  font-family:'Libre Barcode 128';
+  font-size:28px;
+  cursor:pointer;
+}
+
+.bar_code_translated{
+  font-family:'Libre Barcode 128 Text';
+  font-size:28px;
+  font-weight:bold;
+}
+.bar_code:hover{
+  font-family:'Libre Barcode 128 Text';
+  font-weight:bold;
+}
+
+.reset_me{
+  padding:5px;
+  text-align:center;
+  color:black;
+  font-family:'Yanone Kafeesatz';
+  border:10px solid pink;
+  width:100px;
+  margin:0 0 0 20px;
+  cursor:pointer;
+}
+
+.jump_to .the_last_of_us:last-child{
+  display:none;
+}
+
+.fibonacci_cc{
+  margin:auto;
+  width:400px;
+}
+
+.container_fibonacci_spiral{
+  position:relative;
+  width:100%;/*width = somme de toutes les occurrences ; height = width;*/
+  height:4000px;
+  display:flex;
+  flex-flow:row wrap;
+  align-items:center;
+  justify-content:space-around;
+}
+.neo_fibo{/*Le square 1x1 de référence*/
+  position:relative;
+  width:1px;
+  height:1px;
+  background-color:black;
+
+}
+.square_fibo{
+  position:absolute;
+  z-index:-1;
+}
+
+/*test placement fibo à la main*/
+.test_absolute{
+  display:flex;
+  align-items:center;
+  flex-flow:row wrap;
+  justify-content:space-around;
+}
+.test_ref{
+  position:relative;
+  width:1px;
+  height:1px;
+  background-color:black;
+}
+
+.bow_bottom{
+  width: 100%;/*width occ_9*/
+  height: 100%;/*height occ_9*/
+  -webkit-border-radius: 0 0 0 100%;
+  border-radius: 0 0 0 100%;
+  border-bottom:.5px solid black;
+  box-sizing:border-box;
+}
+.bow_right{
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 0 0 100% 0;
+  border-radius: 0 0 100% 0;
+  border-bottom:.5px solid black;
+  box-sizing:border-box;
+}
+.bow_top{
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 0 100% 0 0;
+  border-radius: 0 100% 0 0;
+  border-top:.5px solid black;
+  box-sizing:border-box;
+}
+.bow_left{
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 100% 0 0;
+  border-radius: 100% 0 0;
+  border-top:.5px solid black;
+  box-sizing:border-box;
+}
+
+.occ_2{/*occ_right*/
+  width:1px;
+  height:1px;
+  background-color:pink;
+  right:-1px;/*-{1}*//*-{1}+(-stack{1}_occ_prev)*/
+  bottom:0;/*-{4}px*//*(-{4}+(-stack{4}_occ_prev))*/
+}
+.occ_3{/*occ_top*/
+  width:2px;
+  height:2px;
+  background-color:green;
+  left:0;/*-{3}px*//*-{3}+(-stack{3}_occ_prev)*/
+  top:-2px;/*-{2}px*//*-{2}+(-stack{2}_occ_prev)*/
+}
+.occ_4{/*occ_left*/
+  width:3px;
+  height:3px;
+  background-color:navy;
+  left:-3px;/*-{3}px*//*-{3}+(-stack{3}_occ_prev)*/
+  top:-2px;/*-{2}px*//*-{2}+(-stack{2}_occ_prev)*/
+}
+.occ_5{/*occ_bottom*/
+  width:5px;
+  height:5px;
+  background-color:red;
+  bottom:-5px;/*-{4}px*//*-{4}+(-stack{4}_occ_prev)*/
+  right:-1px;/*-{1}px*//*-{1}+(-stack{1}_occ_prev)*/
+}
+
+.occ_6{
+  width:8px;
+  height:8px;
+  background-color:cyan;
+  right:-9px;
+  bottom:-5px;
+}
+.occ_7{
+  width:13px;
+  height:13px;
+  background-color:purple;
+  left:-3px;
+  top:-15px;
+}
+.occ_8{
+  width:21px;
+  height:21px;
+  background-color:yellow;
+  left:-24px;
+  top:-15px;
+}
+.occ_9{
+  width:34px;
+  height:34px;
+  background-color:crimson;
+  bottom:-39px;
+  right:-9px;
+}
