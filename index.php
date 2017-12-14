@@ -7,6 +7,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Spectral+SC" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   </head>
 
@@ -84,7 +85,6 @@
 
      ?>
    </section>
-    <!--<script src="jquery-3.2.1.min.js" type="text/javascript"></script>-->
     <script src="main.js" type="text/javascript"></script>
   </body>
 </html>
