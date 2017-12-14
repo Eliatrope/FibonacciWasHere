@@ -1,2 +1,4 @@
 # FibonacciWasHere
-Trying to entertain with Fibonacci numbers, golden ratio etc
+Trying to get entertainment with Fibonacci numbers, golden ratio etc
+
+Download and e
