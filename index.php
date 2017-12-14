@@ -5,8 +5,7 @@
 <html lang="fr">
   <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Spectral+SC" rel="stylesheet">
 
   </head>
@@ -85,7 +84,7 @@
 
      ?>
    </section>
-    <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="assets/js/main.js" type="text/javascript"></script>
+    <!--<script src="jquery-3.2.1.min.js" type="text/javascript"></script>-->
+    <script src="main.js" type="text/javascript"></script>
   </body>
 </html>
