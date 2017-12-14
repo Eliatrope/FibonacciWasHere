@@ -118,7 +118,8 @@
 
     Pour les règles CSS, le pattern ne change pas, à l'exception que chaque valeur actuelle est incrémentée et ajoutée à sa précédente valeur.
     Un stack est donc à prévoir.
-    */
+    
+    You don't understand french fiddlestick ? Me neither...*/
   ?>
     </div>
   </div>
