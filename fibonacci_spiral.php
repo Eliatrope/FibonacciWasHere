@@ -103,7 +103,7 @@
     Le pattern est le suivant:
     Si l'on décompose de manière séquencée la suite de Fibonacci, et plus particulièrement l'une de ses représentations graphiques (celle appelée spirale de Fibonacci), on remarque qu'un pattern en 4 étapes en découle.
     Le square n°1 {φ} (correspondant à l'occurrence n°1 {1}) est le point central de la spirale (en haut à gauche de celui-ci, on a le square n°0 (correspondant à l'occurrence n° 0 (0), square invisible car 0x0)) nous sert de référence ici. C'est autour de celui-ci que vont "tourner" les autres square (les autres occurrences donc).
-    La logique que j'ai décidée d'adopter fait que le square n°1 correspond à 0 et n'entre donc pas dans le pattern ; en fait, c'est le square de référence, de base, celui autour duquel les autres square vont venir graviter tour à tour (cf plus haut).
+    La logique que j'ai décidé d'adopter fait que le square n°1 correspond à 0 et n'entre donc pas dans le pattern ; en fait, c'est le square de référence, de base, celui autour duquel les autres square vont venir graviter tour à tour (cf plus haut).
     C'est à partir du square n°2 que le pattern commence.
 
     Le square n°2 est la première étape du pattern -> {1}
@@ -118,8 +118,7 @@
 
     Pour les règles CSS, le pattern ne change pas, à l'exception que chaque valeur actuelle est incrémentée et ajoutée à sa précédente valeur.
     Un stack est donc à prévoir.
-    
-    You don't understand french fiddlestick ? Me neither...*/
+    */
   ?>
     </div>
   </div>

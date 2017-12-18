@@ -5,9 +5,9 @@
 <html lang="fr">
   <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Spectral+SC" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   </head>
 
@@ -36,13 +36,14 @@
     <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit']) && null!=($_POST['to']) && 0 < $_POST['to'] && '0'!= $_POST['to'] && $_POST['to'] > 1){
       $from = 1;
-      $to = $_POST['to'];
+      $to = $_POST['to'] - 1;
+      echo '<a href="#jump_to_square">Jump to square explanation</a><br />';
 
       function jumpTo($from, $to){
         echo '<a href="#jump_to_spiral">Jump to spiral</a>';
         echo '<div class="jump_to">'.
         '<h2>Hey, wanna jump to somewhere ?</h2>';
-        for($from;$from<=$to;$from++){
+        for($from;$from<=$to + 1;$from++){
           $jump_each = '<a href="#'.$from.'">'.$from.'</a><span class="the_last_of_us">,</span> ';
 
           echo $jump_each;
@@ -57,18 +58,19 @@
 
         $current = 1;
         $prev = 0;
-        $starter = '<div class="bar_code fl">Occurrence 0: 0 </div><br /> ';
+        $starter = '<div class="bar_code fl">Occurrence 0: 0 </div><div class="cb"></div><div class="bar_code fl">Occurrence 1 : 1 ratio 1 / 1 = 1</div><br />';
         $starter_one = '';
         $reset_me = '<div class="reset_me">HODOR</div>';
 
 
         echo $reset_me;
           for($from;$from<=$to;$from++){
+            $good_occ = $from + 1;
             $stack_prev = $prev;
             $prev = $current;
             $current = $current + $stack_prev;
 
-            $fibonacciInactive ='<div class="bar_code fl" id="'.$from.'">Occurrence '.$from.': '.$current.' ratio '.$current.' / '.$prev.' = '.$current / $prev.'</div>';
+            $fibonacciInactive ='<div class="bar_code fl" id="'.$good_occ.'">Occurrence '.$good_occ.': '.$current.' ratio '.$current.' / '.$prev.' = '.$current / $prev.'</div>';
 
             echo $starter.'<div class="cb"></div>';
             echo $fibonacciInactive.'<br /><div class="cb"></div>';
@@ -76,15 +78,18 @@
             $starter ='';
         }
       }
-
       fibonacciHere($from, $to);
       include_once('fibonacci_spiral.php');
+
+      include_once('fibonacci_rectangle.php');
+      stackFibonacci($from, $to);
     }else{
       echo "Stop repeating things...";
     }
 
      ?>
    </section>
-    <script src="main.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
   </body>
 </html>
